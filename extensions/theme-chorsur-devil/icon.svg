@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="lava" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF2222;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF6600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF2222;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00AA44;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FF66;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#660000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#990000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="#0D0D0D"/>
+  
+  <!-- Cube: Left face (red/lava) -->
+  <polygon points="256,180 256,420 96,330 96,90" fill="#2A0000" stroke="#FF4400" stroke-width="1.5"/>
+  <!-- Lava cracks on left face -->
+  <line x1="176" y1="130" x2="176" y2="380" stroke="#FF4400" stroke-width="2" opacity="0.6" filter="url(#glow)"/>
+  <line x1="130" y1="200" x2="220" y2="260" stroke="#FF6600" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+  <line x1="140" y1="280" x2="230" y2="340" stroke="#FF4400" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+  <line x1="110" y1="160" x2="200" y2="200" stroke="#FF6600" stroke-width="1" opacity="0.4" filter="url(#glow)"/>
+  <line x1="160" y1="300" x2="240" y2="380" stroke="#FF4400" stroke-width="1" opacity="0.4" filter="url(#glow)"/>
+  <!-- Rune on left face -->
+  <g filter="url(#glow-strong)" opacity="0.8">
+    <line x1="165" y1="200" x2="165" y2="300" stroke="#FF6600" stroke-width="3"/>
+    <line x1="145" y1="230" x2="185" y2="230" stroke="#FF6600" stroke-width="3"/>
+    <line x1="145" y1="270" x2="185" y2="270" stroke="#FF6600" stroke-width="3"/>
+  </g>
+  
+  <!-- Cube: Right face (green) -->
+  <polygon points="256,180 256,420 416,330 416,90" fill="#0A2A0A" stroke="#00FF66" stroke-width="1.5"/>
+  <!-- Green energy cracks -->
+  <line x1="336" y1="130" x2="336" y2="380" stroke="#00FF66" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <line x1="290" y1="220" x2="380" y2="280" stroke="#00FF88" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+  <line x1="300" y1="300" x2="390" y2="360" stroke="#00FF66" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+  <line x1="310" y1="160" x2="370" y2="200" stroke="#00DD55" stroke-width="1" opacity="0.3" filter="url(#glow)"/>
+  <!-- Rune on right face -->
+  <g filter="url(#glow-strong)" opacity="0.7">
+    <line x1="340" y1="210" x2="340" y2="290" stroke="#00FF88" stroke-width="3"/>
+    <line x1="320" y1="250" x2="360" y2="210" stroke="#00FF88" stroke-width="3"/>
+    <line x1="320" y1="250" x2="360" y2="290" stroke="#00FF88" stroke-width="3"/>
+  </g>
+  
+  <!-- Cube: Top face -->
+  <polygon points="256,180 96,90 256,10 416,90" fill="#440000" stroke="#FF2222" stroke-width="1.5"/>
+  <!-- Arcane circle on top -->
+  <circle cx="256" cy="95" r="40" fill="none" stroke="#FF4400" stroke-width="2" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="256" cy="95" r="25" fill="none" stroke="#FF6600" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+  <!-- Rune marks on top -->
+  <line x1="256" y1="60" x2="256" y2="130" stroke="#FF4400" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <line x1="220" y1="95" x2="292" y2="95" stroke="#FF4400" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  
+  <!-- Devil horns -->
+  <g filter="url(#glow)">
+    <!-- Left horn -->
+    <polygon points="86,90 70,40 96,72" fill="#3A0000" stroke="#FF2222" stroke-width="1.5"/>
+    <polygon points="70,40 60,20 86,50" fill="#2A0000" stroke="#FF4400" stroke-width="1"/>
+    <!-- Right horn -->
+    <polygon points="426,90 442,40 416,72" fill="#3A0000" stroke="#FF2222" stroke-width="1.5"/>
+    <polygon points="442,40 452,20 426,50" fill="#2A0000" stroke="#FF4400" stroke-width="1"/>
+  </g>
+  
+  <!-- Edge glow effects -->
+  <line x1="96" y1="90" x2="96" y2="330" stroke="#FF2222" stroke-width="2" opacity="0.3" filter="url(#glow)"/>
+  <line x1="416" y1="90" x2="416" y2="330" stroke="#00FF66" stroke-width="2" opacity="0.3" filter="url(#glow)"/>
+  <line x1="256" y1="180" x2="256" y2="420" stroke="#FF6600" stroke-width="1" opacity="0.2" filter="url(#glow)"/>
+  
+  <!-- Bottom glow -->
+  <ellipse cx="256" cy="440" rx="120" ry="15" fill="#FF2222" opacity="0.15" filter="url(#glow-strong)"/>
+  
+  <!-- CHORSUR text -->
+  <text x="256" y="480" text-anchor="middle" fill="#FF2222" font-family="monospace" font-size="28" font-weight="bold" letter-spacing="8" filter="url(#glow)">CHORSUR</text>
+</svg>
