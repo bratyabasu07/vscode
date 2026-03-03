@@ -1,0 +1,23 @@
+{
+	"name": "theme-chorsur-devil",
+	"displayName": "CHORSUR Devil Theme",
+	"description": "The default dark theme for CHORSUR — forged in hellfire.",
+	"version": "1.0.0",
+	"publisher": "elliotjr",
+	"license": "MIT",
+	"engines": {
+		"vscode": "*"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "CHORSUR Devil",
+				"uiTheme": "vs-dark",
+				"path": "./themes/chorsur-devil-color-theme.json"
+			}
+		]
+	}
+}
